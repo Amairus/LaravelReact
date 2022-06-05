@@ -10,10 +10,18 @@ function Header()
             <Container>
             <Navbar.Brand href="#home">E-Com</Navbar.Brand>
             <Nav className="mr-auto navbar_warapper">
-            <Link to="/add" >Add Product </Link>
-            <Link to="/update" >Update Product </Link>
-            <Link to="/login" >Login </Link>
-            <Link to="/register" >Register </Link>
+                {
+                    localStorage.getItem('user-info') ? 
+                    <>
+                    <Link to="/add" >Add Product </Link>
+                    <Link to="/update" >Update Product </Link>
+                    </>
+                    :
+                    <>
+                    <Link to="/login" >Login </Link>
+                    <Link to="/register" >Register </Link>   
+                    </>
+                }
             </Nav>
             </Container>
         </Navbar>
