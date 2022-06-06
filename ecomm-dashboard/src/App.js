@@ -35,7 +35,6 @@ function App() {
           <UpdateProduct />
         </Route> 
       </BrowserRouter> */}
-      <h1>JUSI NOT PUSSY</h1>
     </div>
   );
 }
