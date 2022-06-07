@@ -1,13 +1,13 @@
-import logo from './logo.svg';
+
 import './App.css';
-import React, { Component }  from 'react';
-import {Button} from 'react-bootstrap';
+import React from 'react';
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import Login from './Login';
 import Register from './Register';
 import AddProduct from './AddProduct';
 import UpdateProduct from './UpdateProduct';
 import Protected from './Protected';
+import ProductList from './ProductList';
 
 function App() {
   return (
@@ -16,6 +16,7 @@ function App() {
         <Routes>
           <Route exact path='/login' element={<Login />} />
           <Route exact path='/register' element={<Register />} />
+          <Route exact path='/' element={<Protected Cmp={ProductList} />} />
           <Route exact path='/add' element={<Protected Cmp={AddProduct} />} />
           <Route exact path='/update' element={<Protected  Cmp={UpdateProduct} />} />
         </Routes>
